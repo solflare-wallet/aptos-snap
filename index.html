@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <title>Hello, Snaps!</title>
+</head>
+<body>
+  <h1>Hello, Snaps!</h1>
+
+  <button class="connect">Connect</button>
+  <button class="sendHello">Send Hello</button>
+  <button class="getPrivkey">Get private key</button>
+  <button class="sign">Sign message</button>
+
+  <script>
+    const snapId = `local:${window.location.href}`;
+
+    const connectButton = document.querySelector('button.connect')
+    const sendButton = document.querySelector('button.sendHello')
+    const getPrivkeyButton = document.querySelector('button.getPrivkey')
+    const signButton = document.querySelector('button.sign')
+
+    connectButton.addEventListener('click', connect)
+    sendButton.addEventListener('click', send)
+    getPrivkeyButton.addEventListener('click', getPrivkey)
+    signButton.addEventListener('click', sign)
+
+    // here we get permissions to interact with and install the snap
+    async function connect () {
+      await ethereum.request({
+        method: 'wallet_requestSnaps',
+        params: { [snapId]: {} }
+      })
+    }
+
+    async function send () {
+      try {
+        const response = await ethereum.request({
+          method: 'wallet_invokeSnap',
+          params: {
+            snapId,
+            request: {
+              method: 'hello'
+            }
+          }
+        })
+        console.log(response);
+      } catch (err) {
+        console.error(err)
+        alert('Problem happened: ' + err.message || err)
+      }
+    }
+
+    async function getPrivkey () {
+      try {
+        const response = await ethereum.request({
+          method: 'wallet_invokeSnap',
+          params: {
+            snapId,
+            request: {
+              method: 'getPublicKey',
+              params: [`m/44'/637'/0'/0'/0'`, true]
+            }
+          }
+        })
+        console.log(response);
+      } catch (err) {
+        console.error(err)
+        alert('Problem happened: ' + err.message || err)
+      }
+    }
+
+    async function sign () {
+      try {
+        const response = await ethereum.request({
+          method: 'wallet_invokeSnap',
+          params: {
+            snapId,
+            request: {
+              method: 'signMessage',
+              params: [`m/44'/637'/0'/0'/0'`, '0x4150544f530a6d6573736167653a2048656c6c6f2066726f6d206163636f756e74203078663131366664313134653465363238346238383439306234393839393534346534613166346266643564663533373434616633303863383837313134306137300a6e6f6e63653a2072616e646f6d5f737472696e67']
+            }
+          }
+        })
+        console.log(response);
+      } catch (err) {
+        console.error(err)
+        alert('Problem happened: ' + err.message || err)
+      }
+    }
+  </script>
+</body>
+</html>
