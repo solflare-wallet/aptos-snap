@@ -1,9 +1,9 @@
 {
   "version": "0.0.1",
   "description": "The Aptos Snap.",
-  "proposedName": "@rise-wallet/aptos-snap",
+  "proposedName": "Aptos Manager",
   "source": {
-    "shasum": "FSl8lywBWLFCoWIoqxrAQ0w2kBRdzfFqKVeevSAf7cs=",
+    "shasum": "GeBQ8rY6GuU6UX/WsGs84R6ordayBX3Dtx+PLkwABpA=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
