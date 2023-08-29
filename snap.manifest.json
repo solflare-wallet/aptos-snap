@@ -3,7 +3,7 @@
   "description": "The Aptos Snap.",
   "proposedName": "Aptos Manager",
   "source": {
-    "shasum": "wORcSuQ4DSSU3UFTj4P2gUptGrEgH/9Yd2Lv4rw0MqE=",
+    "shasum": "LdM4Hqdy6M/yRrtFwWZ1Pl2heUXqYjeUihCQ3CX09TQ=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",

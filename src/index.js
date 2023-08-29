@@ -7,8 +7,8 @@ module.exports.onRpcRequest = async ({ origin, request }) => {
   if (
     !origin ||
     (
-      !origin.match(/^https?:\/\/localhost:[0-9]{1,4}$/) &&
-      !origin.match(/^https?:\/\/(?:\S+\.)?risewallet\.dev$/)
+      !origin.match(/^https:\/\/(?:\S+\.)?risewallet\.io$/) &&
+      !origin.match(/^https:\/\/(?:\S+\.)?risewallet\.dev$/)
     )
   ) {
     throw new Error('Invalid origin');
