@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Aptos Snap.",
   "proposedName": "Aptos Manager",
   "repository": {
@@ -7,7 +7,7 @@
     "url": "https://github.com/solflare-wallet/aptos-snap.git"
   },
   "source": {
-    "shasum": "w/3xBQyxmW5eRm+uZiYjuaTThHdHL/ldbqnog1p/s24=",
+    "shasum": "IoTc2X6NRzJmJwE/FHvAQQx2XDzfKughbvHT4Fntmp8=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",

@@ -1,6 +1,6 @@
 {
   "name": "@rise-wallet/aptos-snap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Aptos Snap.",
   "main": "src/index.js",
   "scripts": {
