@@ -1,7 +1,7 @@
 {
   "name": "@rise-wallet/aptos-snap",
   "version": "1.0.3",
-  "description": "Manage Aptos-based tokens and NFT, swap, stake and connect to Aptos apps with your MetaMask.",
+  "description": "Manage Aptos-based tokens and NFTs, swap, stake and connect to Aptos apps with MetaMask.",
   "main": "src/index.js",
   "scripts": {
     "start": "mm-snap build && mm-snap serve",

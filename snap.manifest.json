@@ -1,13 +1,13 @@
 {
   "version": "1.0.3",
-  "description": "Manage Aptos-based tokens and NFT, swap, stake and connect to Aptos apps with your MetaMask.",
+  "description": "Manage Aptos-based tokens and NFTs, swap, stake and connect to Aptos apps with MetaMask.",
   "proposedName": "Aptos Wallet",
   "repository": {
     "type": "git",
     "url": "https://github.com/solflare-wallet/aptos-snap.git"
   },
   "source": {
-    "shasum": "7/q4Dusb1s0W9YD/wBCn35EatHA5friAAqWh4TWElR8=",
+    "shasum": "GMwL0cJ+ThfrJ/bU08KMikn0hGUbo3MhrK/m88RwbkY=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
